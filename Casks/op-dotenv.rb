@@ -2,7 +2,7 @@
 cask "op-dotenv" do
   desc "Convert .env files to 1Password items and vice versa"
   homepage "https://github.com/scriptogre/op-dotenv"
-  version "0.0.13"
+  version "0.0.14"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,23 +15,23 @@ cask "op-dotenv" do
 
   on_macos do
     on_intel do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Darwin_x86_64.tar.gz"
-      sha256 "334a9a964095e2b89c39d9de468965500912516b34b092d1fe3380cd9d5aee91"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.14/op-dotenv_Darwin_x86_64.tar.gz"
+      sha256 "d0f10070a51faa723686553694c35e0e92069702b372d42934e1bec09610a46f"
     end
     on_arm do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Darwin_arm64.tar.gz"
-      sha256 "619749c4f65e415521a9c0a6fe739732f0e494f8f58e0be561f1e30608444b00"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.14/op-dotenv_Darwin_arm64.tar.gz"
+      sha256 "9f1d13e13b6b06f5d5f8d7c14a59ecf24ea25adc8ce8bb2508cee8434f9e05ea"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Linux_x86_64.tar.gz"
-      sha256 "2812143f794d6f3910b5096535472d8083a30cf06a1c88004f969760dc77de6f"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.14/op-dotenv_Linux_x86_64.tar.gz"
+      sha256 "283a7443f8e33208d12722be6815d08166b8c86923ef9898e03be3a4ce91aed1"
     end
     on_arm do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Linux_arm64.tar.gz"
-      sha256 "e3d17e9c457fee008c60943cee4f95497743889acfd8c8e72ce757fac4bef020"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.14/op-dotenv_Linux_arm64.tar.gz"
+      sha256 "ec57cf68eb3e0463f641bb0fb78ab35f7bbb979a2621427a73f14e1d45f03baf"
     end
   end
 
@@ -45,7 +45,7 @@ cask "op-dotenv" do
     "Requires 1Password CLI: brew install --cask 1password-cli"
     ""
     "On first run, macOS may show a security warning. Go to:"
-    "System Settings > Privacy & Security > Click "Allow Anyway""
+    "System Settings > Privacy & Security > Click 'Allow Anyway'"
   end
 
   # No zap stanza required
