@@ -5,23 +5,23 @@
 class OpDotenv < Formula
   desc "Convert .env files to 1Password items and vice versa"
   homepage "https://github.com/scriptogre/op-dotenv"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   depends_on "1password-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.6/op-dotenv_Darwin_x86_64.tar.gz"
-      sha256 "5d4ef18d2e65db018c3a04eff9b7bc15374ea3e808797e18e15323b056f6e76d"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.7/op-dotenv_Darwin_x86_64.tar.gz"
+      sha256 "35f88585edb9bc37c963b3d4a82a9b6729ca141d4d15977e875f7d16a94bce7f"
 
       def install
         bin.install "op-dotenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.6/op-dotenv_Darwin_arm64.tar.gz"
-      sha256 "751aa4455c9a6560f80d8184d7e7f8c3e0543e068a2a2abab45f84fa2e61d6d2"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.7/op-dotenv_Darwin_arm64.tar.gz"
+      sha256 "b49fb972c41e0aab75e2e1d61ac7022289df2186156cfb40c4d97abbf6e76ecd"
 
       def install
         bin.install "op-dotenv"
@@ -31,15 +31,15 @@ class OpDotenv < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.6/op-dotenv_Linux_x86_64.tar.gz"
-      sha256 "71611b6dc2f205c51f75eb179142cf515e62c7fdad27b385308ff98e4ed9b8fd"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.7/op-dotenv_Linux_x86_64.tar.gz"
+      sha256 "c302e7904e7735ed313e4157ade467fe66df927f73b880493d2c9db12b08022a"
       def install
         bin.install "op-dotenv"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.6/op-dotenv_Linux_arm64.tar.gz"
-      sha256 "41eb5f6d558c615de602f1505760ddf3c23e2b9173b35dcdbf65c8122a807fea"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.7/op-dotenv_Linux_arm64.tar.gz"
+      sha256 "a89d61c9cab16d3dee8a212f7237db2f73edd2c2f60ab434cea911e88ac045cf"
       def install
         bin.install "op-dotenv"
       end
