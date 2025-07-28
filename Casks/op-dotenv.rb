@@ -2,7 +2,7 @@
 cask "op-dotenv" do
   desc "Convert .env files to 1Password items and vice versa"
   homepage "https://github.com/scriptogre/op-dotenv"
-  version "0.0.12"
+  version "0.0.13"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,23 +15,23 @@ cask "op-dotenv" do
 
   on_macos do
     on_intel do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Darwin_x86_64.tar.gz"
-      sha256 "50cccc037215ef1e91504240b8173b513f456baf6139ce2be263eb4f89aa41eb"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Darwin_x86_64.tar.gz"
+      sha256 "334a9a964095e2b89c39d9de468965500912516b34b092d1fe3380cd9d5aee91"
     end
     on_arm do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Darwin_arm64.tar.gz"
-      sha256 "af60a80a4d98d1078b176c57ea9228cc34a9a9388383cbdcea6ad4f8612ba948"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Darwin_arm64.tar.gz"
+      sha256 "619749c4f65e415521a9c0a6fe739732f0e494f8f58e0be561f1e30608444b00"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Linux_x86_64.tar.gz"
-      sha256 "ed4b31936b4596559616c4b9beb664d7cbf43aee327c02cb16c0fad32c5e50c4"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Linux_x86_64.tar.gz"
+      sha256 "2812143f794d6f3910b5096535472d8083a30cf06a1c88004f969760dc77de6f"
     end
     on_arm do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Linux_arm64.tar.gz"
-      sha256 "53f2f44f92df2631dac9abe72ceb8093f1cef04fa3ae42886035375ebb1c5f9a"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.13/op-dotenv_Linux_arm64.tar.gz"
+      sha256 "e3d17e9c457fee008c60943cee4f95497743889acfd8c8e72ce757fac4bef020"
     end
   end
 
