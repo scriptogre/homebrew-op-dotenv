@@ -5,23 +5,21 @@
 class OpDotenv < Formula
   desc "Convert .env files to 1Password items and vice versa"
   homepage "https://github.com/scriptogre/op-dotenv"
-  version "0.0.9"
+  version "0.1.4"
   license "MIT"
-
-  depends_on "1password-cli" => :cask
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.9/op-dotenv_Darwin_x86_64.tar.gz"
-      sha256 "b85d70fa01ba60e0a8e3df004e096c0cb093c09d7c93bcd4e7a6be2b77f67b72"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.1.4/op-dotenv_Darwin_x86_64.tar.gz"
+      sha256 "7e15a54e078bface96dda8b7768e7ef57eddd346f37b6f5733443246d82d092d"
 
       def install
         bin.install "op-dotenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.9/op-dotenv_Darwin_arm64.tar.gz"
-      sha256 "3a6ec79bed67e7d50921ff9e59b2dd11c59b352f488643ba58c459aadd261f56"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.1.4/op-dotenv_Darwin_arm64.tar.gz"
+      sha256 "12f07449a1eaf593ac3913df366336d49aea4947a3ac4583e4320db53d2480fa"
 
       def install
         bin.install "op-dotenv"
@@ -31,22 +29,24 @@ class OpDotenv < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.9/op-dotenv_Linux_x86_64.tar.gz"
-      sha256 "b8b31f955061be037d95885d098fbab094bf8d10482a9ac3fd40126f116cd487"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.1.4/op-dotenv_Linux_x86_64.tar.gz"
+      sha256 "2485e3284edcb41b03d5850748c9756339bc2e6285b4b7df32970a65a23e0308"
       def install
         bin.install "op-dotenv"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.9/op-dotenv_Linux_arm64.tar.gz"
-      sha256 "2f72bace414e1035bac37d3ccece94d5d4a7058d2aedf73f34362f0129b589fe"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.1.4/op-dotenv_Linux_arm64.tar.gz"
+      sha256 "38a9c90354b4a07ed3dfa9d7e2ade2993ee216b68ea2bf2fff1617e7c9de73f6"
       def install
         bin.install "op-dotenv"
       end
     end
   end
 
-  test do
-    system "#{bin}/op-dotenv --version"
+  def caveats
+    <<~EOS
+      Requires 1Password CLI: brew install --cask 1password-cli
+    EOS
   end
 end
