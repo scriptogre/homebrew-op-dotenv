@@ -2,7 +2,7 @@
 cask "op-dotenv" do
   desc "Convert .env files to 1Password items and vice versa"
   homepage "https://github.com/scriptogre/op-dotenv"
-  version "0.0.11"
+  version "0.0.12"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,28 +15,37 @@ cask "op-dotenv" do
 
   on_macos do
     on_intel do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.11/op-dotenv_Darwin_x86_64.tar.gz"
-      sha256 "c615946c072f72455db13ce4ca895231b07a4486eaaa7e2f02d9b80339aee47d"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Darwin_x86_64.tar.gz"
+      sha256 "50cccc037215ef1e91504240b8173b513f456baf6139ce2be263eb4f89aa41eb"
     end
     on_arm do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.11/op-dotenv_Darwin_arm64.tar.gz"
-      sha256 "fe8a1cdbb9733c2a7234c0fd6456efe4f39782a236548bb3fb21d15fb49634ee"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Darwin_arm64.tar.gz"
+      sha256 "af60a80a4d98d1078b176c57ea9228cc34a9a9388383cbdcea6ad4f8612ba948"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.11/op-dotenv_Linux_x86_64.tar.gz"
-      sha256 "7cf5a998f09203d08dc850c58202a431580f176544e2bce82c74e02568e56a6e"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Linux_x86_64.tar.gz"
+      sha256 "ed4b31936b4596559616c4b9beb664d7cbf43aee327c02cb16c0fad32c5e50c4"
     end
     on_arm do
-      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.11/op-dotenv_Linux_arm64.tar.gz"
-      sha256 "ee69abef0e25baaa416d7ea3ee8b1454381f795856913c8957bc52ac0f2465e9"
+      url "https://github.com/scriptogre/op-dotenv/releases/download/v0.0.12/op-dotenv_Linux_arm64.tar.gz"
+      sha256 "53f2f44f92df2631dac9abe72ceb8093f1cef04fa3ae42886035375ebb1c5f9a"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/op-dotenv"]
     end
   end
 
   caveats do
     "Requires 1Password CLI: brew install --cask 1password-cli"
+    ""
+    "On first run, macOS may show a security warning. Go to:"
+    "System Settings > Privacy & Security > Click "Allow Anyway""
   end
 
   # No zap stanza required
